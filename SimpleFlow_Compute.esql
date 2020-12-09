@@ -5,7 +5,7 @@ CREATE COMPUTE MODULE SimpleFlow_Compute
 	BEGIN
 		-- CALL CopyMessageHeaders();
 		-- CALL CopyEntireMessage();
-		SET outputRoot=inputRoot;
+		SET OutputRoot=InputRoot;
 		RETURN TRUE;
 	END;
 

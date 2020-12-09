@@ -6,13 +6,13 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/IIBIntegrationService/icons/full/obj16/SimpleFlow.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/IIBIntegrationService/icons/full/obj30/SimpleFlow.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="132,162" queueName="IIB.INQ.QA" destinationQueueManagerName="TESTBRK01">
+      <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="10,20" queueName="IIB.INQ.QA" connection="CLIENT" destinationQueueManagerName="TESTBRK01" queueManagerHostname="localhost" listenerPortNumber="1416" channelName="APP.TEST.CHANNEL" securityIdentity="mqm">
         <translation xmi:type="utility:ConstantString" string="MQ Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="315,176" computeExpression="esql://routine/#SimpleFlow_Compute.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="112,20" computeExpression="esql://routine/#SimpleFlow_Compute.Main">
         <translation xmi:type="utility:ConstantString" string="Compute"/>
       </nodes>
-      <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="530,180" queueName="IIB.OUTQ.QA" destinationQueueManagerName="TESTBRK01">
+      <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="214,20" queueName="IIB.OUTQ.QA" connection="CLIENT" destinationQueueManagerName="TESTBRK01" queueManagerHostname="localhost" listenerPortNumber="1416" channelName="APP.TEST.CHANNEL" securityIdentity="mqm">
         <translation xmi:type="utility:ConstantString" string="MQ Output"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_4" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
